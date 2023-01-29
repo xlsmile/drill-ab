@@ -4,8 +4,8 @@ import Tour from './Tour';
 const Tours = ({ tours }) => {
   return (
     <section>
-      <h2>Our tours</h2>
-      <div>
+      <h2 className="title">Our tours</h2>
+      <div className="tours">
         {tours.map((tour) => {
           return <Tour key={tour.id} {...tour} />;
         })}

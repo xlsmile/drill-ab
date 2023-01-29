@@ -41,7 +41,7 @@ Variables
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
+  --max-width: 1440px;
   --fixed-width: 620px;
 }
 /*
@@ -100,18 +100,23 @@ p {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -146,23 +151,46 @@ p {
   margin-top: 2rem;
   font-size: 1.2rem;
 }
+
 /*
 ===============
 Tours
 ===============
 */
+
 main {
   width: 90vw;
-  max-width: var(--fixed-width);
+  max-width: var(--max-width);
   margin: 5rem auto;
 }
+
+.tours {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+  gap: 2rem;
+}
+
 .loading {
   text-align: center;
 }
+
 .title {
+  position: relative;
   text-align: center;
   margin-bottom: 4rem;
 }
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 125%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: var(--clr-primary-5);
+  width: 25%;
+  height: 0.25rem;
+}
+
 .underline {
   width: 6rem;
   height: 0.25rem;
@@ -178,9 +206,11 @@ main {
   box-shadow: var(--light-shadow);
   transition: var(--transition);
 }
+
 .single-tour:hover {
   box-shadow: var(--dark-shadow);
 }
+
 .single-tour img {
   width: 100%;
   height: 20rem;
@@ -188,15 +218,23 @@ main {
   border-top-right-radius: var(--radius);
   border-top-left-radius: var(--radius);
 }
+
 .tour-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
 }
+
 .tour-info h4 {
+  color: var(--clr-primary-2);
   margin-bottom: 0;
 }
+
+.tour-description {
+  color: var(--clr-primary-2);
+}
+
 .single-tour button {
   background: transparent;
   border-color: transparent;
@@ -206,24 +244,27 @@ main {
   cursor: pointer;
   padding-left: 0.25rem;
 }
+
 .tour-price {
-  color: var(--clr-primary-5);
-  background: var(--clr-primary-10);
-  padding: 0.25rem 0.5rem;
+  color: var(--clr-primary-3);
+  background: var(--clr-primary-9);
+  padding: 0.5em 0.8em;
   border-radius: var(--radius);
 }
+
 .single-tour footer {
-  padding: 1.5rem 2rem;
+  padding: 2.6rem 3.5rem;
 }
+
 .single-tour .delete-btn {
   display: block;
   width: 200px;
-  margin: 1rem auto 0 auto;
+  margin: 3rem auto 0 auto;
   color: var(--clr-red-dark);
   letter-spacing: var(--spacing);
   background: transparent;
   border: 1px solid var(--clr-red-dark);
-  padding: 0.25rem 0.5rem;
+  padding: 0.7em 0.5em;
   border-radius: var(--radius);
 }
 
