@@ -3,7 +3,19 @@ import people from './data';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
 const Review = () => {
-  return <h2>review component</h2>;
+  const [index, setIndex] = useState(0);
+  const { id, name, job, image, text } = people[index];
+
+  return (
+    <article className="review">
+      <div className="img-container">
+        <img className="person-img" src={image} alt={name} />
+        <span className="quote-icon">
+          <FaQuoteRight />
+        </span>
+      </div>
+    </article>
+  );
 };
 
 export default Review;
