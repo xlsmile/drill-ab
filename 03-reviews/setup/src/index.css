@@ -137,7 +137,6 @@ p {
 }
 /*  global classes */
 
-/* section */
 .section {
   width: 90vw;
   margin: 0 auto;
@@ -182,6 +181,7 @@ main {
   width: 80vw;
   max-width: var(--fixed-width);
 }
+
 .review {
   background: var(--clr-white);
   padding: 1.5rem 2rem;
@@ -239,23 +239,20 @@ main {
 }
 
 .author {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .job {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
   color: var(--clr-primary-5);
   font-size: 0.85rem;
 }
 
-.info {
-  margin-bottom: 0.75rem;
-}
-
 .prev-btn,
 .next-btn {
-  color: var(--clr-primary-7);
+  color: var(--clr-primary-5);
   font-size: 1.25rem;
   background: transparent;
   border-color: transparent;
@@ -266,14 +263,14 @@ main {
 
 .prev-btn:hover,
 .next-btn:hover {
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-3);
 }
 
 .random-btn {
-  margin-top: 0.5rem;
-  background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
-  padding: 0.25rem 0.5rem;
+  margin-top: 1.4rem;
+  background: var(--clr-primary-9);
+  color: var(--clr-primary-3);
+  padding: 0.8em 1.6em;
   text-transform: capitalize;
   border-radius: var(--radius);
   transition: var(--transition);
@@ -283,5 +280,5 @@ main {
 
 .random-btn:hover {
   background: var(--clr-primary-5);
-  color: var(--clr-primary-1);
+  color: var(--clr-primary-10);
 }

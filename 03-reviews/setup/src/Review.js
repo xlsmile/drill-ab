@@ -14,6 +14,18 @@ const Review = () => {
           <FaQuoteRight />
         </span>
       </div>
+      <h4 className="author">{name}</h4>
+      <p className="job">{job}</p>
+      <p className="info">{text}</p>
+      <div className="button-contaier">
+        <button className="prev-btn">
+          <FaChevronLeft />
+        </button>
+        <button className="next-btn">
+          <FaChevronRight />
+        </button>
+      </div>
+      <button className="random-btn">Suprise me</button>
     </article>
   );
 };
